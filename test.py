@@ -3,10 +3,10 @@ import pathlib
 import time
 from datetime import datetime
 
-file_path = r'C:\Users\sguya\PycharmProjects\TileProvider\storage\shumar_v1\tileset.json'
-path = pathlib.Path(file_path)
-last_modified = path.stat().st_mtime
-
+# file_path = r'C:\Users\sguya\PycharmProjects\TileProvider\storage\shumar_v1\tileset.json'
+# path = pathlib.Path(file_path)
+# last_modified = path.stat().st_mtime
+#
 
 def make_http_time_string(timestamp):
     '''Input timestamp and output HTTP header-type time string'''
@@ -19,12 +19,12 @@ def make_http_time_string(timestamp):
 # t = fo.strftime('%a, %d %b %Y %H:%M:%S GMT')
 # print(t)
 
-dir = "Telem-Op-May16_Build_4_ppp"
-file_path = "tileset.json"
-p = pathlib.Path(os.path.join(rf'C:\Users\sguya\PycharmProjects\TileProvider\storage\data\{dir}', file_path))
-print(p)
-print(p.exists())
+# dir = "Telem-Op-May16_Build_4_ppp"
+# file_path = "tileset.json"
+# p = pathlib.Path(os.path.join(rf'C:\Users\sguya\PycharmProjects\TileProvider\storage\data\{dir}', file_path))
+# print(p)
+# print(p.exists())
 
-p = pathlib.Path(r'O:\Data')
+p = pathlib.Path(r'V:\Data')
 print(p.exists())
-print(os.path.exists(rf'C:\Users\sguya\PycharmProjects\TileProvider\storage\data\3DBest'))
+# print(os.path.exists(rf'C:\Users\sguya\PycharmProjects\TileProvider\storage\data\3DBest'))
