@@ -11,26 +11,9 @@ from fastapi import FastAPI
 from starlette.responses import JSONResponse, Response, FileResponse
 import zlib
 import time
+from src.Config import config
 
 app = FastAPI()
-
-
-def load_config():
-    if getattr(sys, 'frozen', False):
-        application_path = os.path.dirname(sys.executable)
-    elif __file__:
-        application_path = os.path.dirname(__file__)
-    else:
-        print('Cannot find application path')
-        return
-
-    config_file = application_path + '/config.yml'
-    if not os.path.exists(config_file):
-        print('Config file missing: ' + config_file)
-    else:
-        with open(config_file, 'r') as file:
-            params = yaml.safe_load(file)
-
 
 def make_http_time_string(timestamp):
     '''Input timestamp and output HTTP header-type time string'''
@@ -40,7 +23,7 @@ def make_http_time_string(timestamp):
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": config.params.source}
 
 
 @app.get("/items/{item_id}")
