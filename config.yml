@@ -1,1 +1,6 @@
-source: O:\Data\3DBest\Data_3DTiles
+sources:
+  - V:\Data\3DBest\Data_3DTiles\241023\3DTiles
+  - V:\Data\3DBest\Data_3DTiles\261023\3dtiles
+  - V:\Data\3DBest\Data_3DTiles\TELEM Agami May 19_Build_3_Telem_may_18
+  - V:\Data\3DBest\Data_3DTiles\Telem-Op-May16_Build_4_ppp
+Allow-Origin: http://localhost:8083
