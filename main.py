@@ -1,23 +1,15 @@
-import json
 import os
 import pathlib
-import sys
 from datetime import datetime
-
-from typing import Union
-
-import yaml
 from fastapi import FastAPI
-from starlette.responses import JSONResponse, Response, FileResponse
-import zlib
-import time
+from starlette.responses import Response, FileResponse
 from src.Config import config
 
 app = FastAPI()
 
 
 def make_http_time_string(timestamp):
-    '''Input timestamp and output HTTP header-type time string'''
+    """Input timestamp and output HTTP header-type time string"""
     time = datetime.fromtimestamp(timestamp)
     return time.strftime('%a, %d %b %Y %H:%M:%S GMT')
 
@@ -28,7 +20,7 @@ async def read_file(source: int, file_path: str):
         directory = config.params['sources'][source]
     else:
         return Response(status_code=404, headers={
-            "Access-Control-Allow-Origin": config.params['sources']['Allow-Origin']
+            "Access-Control-Allow-Origin": config.params['Allow-Origin']
         })
 
     p = pathlib.Path(os.path.join(directory, file_path))

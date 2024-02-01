@@ -3,4 +3,6 @@ sources:
   - O:\Data\3DBest\Data_3DTiles\261023\3dtiles
   - O:\Data\3DBest\Data_3DTiles\TELEM Agami May 19_Build_3_Telem_may_18
   - O:\Data\3DBest\Data_3DTiles\Telem-Op-May16_Build_4_ppp
+  - O:\Data\3DBest\Data_3DTiles\flip_yz_v5
+
 Allow-Origin: http://localhost:8083
